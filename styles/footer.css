@@ -1,0 +1,154 @@
+/* Footer Mobile-First CSS */
+footer {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.footer-section p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--white);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  footer {
+    padding: 3rem 2rem;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+  .footer-section {
+    text-align: left;
+    flex: 1;
+    max-width: 300px;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  footer {
+    padding: 4rem 2rem 3rem;
+  }
+
+  .footer-content {
+    gap: 4rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-section p {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    gap: 2rem;
+  }
+
+  .social-links a {
+    font-size: 1.75rem;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+  .footer-content {
+    gap: 6rem;
+  }
+}
+
+/* Optional: Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  footer {
+    background: #1a1a1a;
+  }
+
+  .footer-section h3 {
+    color: var(--secondary-color);
+  }
+
+  .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Animation for social icons */
+@keyframes socialHover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.social-links a:hover i {
+  animation: socialHover 0.3s ease;
+}

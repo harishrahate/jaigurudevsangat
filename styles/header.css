@@ -1,0 +1,343 @@
+/* Header and Navigation */
+header {
+  background: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Mobile Menu Button */
+#mobile-menu {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+#mobile-menu i {
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+/* Navigation Links */
+.nav-links {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding-top: 2rem;
+}
+
+.nav-links.active {
+  transform: translateX(0);
+}
+
+.nav-links li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.nav-links.active li {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  nav {
+    padding: 0 2rem;
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    height: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+    background: transparent;
+    width: auto;
+  }
+
+  .nav-links li {
+    width: auto;
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav-links a {
+    padding: 1.5rem 1rem;
+  }
+
+  .nav-links a:hover {
+    background: none;
+    color: var(--secondary-color);
+  }
+
+  .menu-overlay {
+    display: none;
+  }
+
+  .service-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    min-height: 400px;
+  }
+}
+
+/* Animation Classes */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logo a:hover {
+  color: var(--secondary-color);
+}
+
+#mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0.5rem;
+  transition: var(--transition);
+}
+
+#mobile-menu:hover {
+  color: var(--secondary-color);
+}
+
+.nav-links {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: var(--transition);
+  padding-top: 2rem;
+}
+
+.nav-links.active {
+  transform: translateX(0);
+}
+
+.nav-links li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-link {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  transition: var(--transition);
+  font-size: 1.1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+  .nav-container {
+    padding: 0 2rem;
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    height: 100%;
+    transform: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+    background: transparent;
+    width: auto;
+  }
+
+  .nav-links li {
+    width: auto;
+  }
+
+  .nav-link {
+    padding: 0 1.5rem;
+    height: var(--header-height);
+    line-height: var(--header-height);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: none;
+  }
+
+  .menu-overlay {
+    display: none;
+  }
+}
+
+/* Optional: Add scroll-up header animation */
+.main-header {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+/* Optional: Add header background change on scroll */
+.header-scrolled {
+  background: rgba(102, 51, 153, 0.95);
+  backdrop-filter: blur(10px);
+}
