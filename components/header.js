@@ -4,7 +4,7 @@ export const createHeader = () => {
     <header class="main-header">
       <nav class="nav-container">
         <div class="logo">
-          <a href="#home">Spiritual Bliss</a>
+          <a href="#home">Baba jaigurudev Sangat, Pune</a>
         </div>
         <button id="mobile-menu" aria-label="Toggle menu">
           <i class="fas fa-bars"></i>

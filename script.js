@@ -2,6 +2,12 @@ import { createHeader, initializeHeader } from "./components/header.js";
 import { createContent, initializeContent } from "./components/content.js";
 import { createFooter } from "./components/footer.js";
 
+window.onload = function () {
+  setTimeout(function () {
+    window.scrollTo(0, 0);
+  }, 100); // 100ms delay
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const app = document.getElementById("app");
   app.innerHTML = `

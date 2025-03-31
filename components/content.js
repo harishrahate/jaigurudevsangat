@@ -1,8 +1,8 @@
 export const createContent = () => {
   const contentHTML = `
       <main>
-        <section class="hero">
-          <h1>Welcome to Spiritual Bliss</h1>
+        <section id="home" class="hero">
+          <h1>Welcome to Baba jaigurudev Sangat, Pune</h1>
           <p>Find your inner peace and harmony</p>
           <button class="btn">Get Started</button>
         </section>
@@ -86,7 +86,7 @@ export const createContent = () => {
               <i class="fas fa-envelope"></i>
               <div>
                 <h3>Email</h3>
-                <p>info@spiritualbliss.com</p>
+                <p>info@jaigurudevsangatpune.com</p>
               </div>
             </div>
           </div>
@@ -115,6 +115,6 @@ export const createContent = () => {
 export const initializeContent = () => {
   const btn = document.querySelector(".btn");
   btn.addEventListener("click", function () {
-    alert("Welcome to Spiritual Bliss!");
+    alert("Welcome to Baba jaigurudev Sangat, Pune!");
   });
 };

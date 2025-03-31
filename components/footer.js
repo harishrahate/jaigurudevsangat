@@ -4,7 +4,7 @@ export const createFooter = () => {
         <div class="footer-content">
           <div class="footer-section">
             <h3>Contact Us</h3>
-            <p>Email: info@spiritualbliss.com</p>
+            <p>Email: info@jaigurudevsangatpune.com</p>
             <p>Phone: (123) 456-7890</p>
           </div>
           <div class="footer-section">
@@ -17,7 +17,7 @@ export const createFooter = () => {
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Spiritual Bliss. All rights reserved.</p>
+          <p>&copy; 2024 Baba jaigurudev Sangat, Pune. All rights reserved.</p>
         </div>
       </footer>
     `;

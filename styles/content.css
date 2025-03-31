@@ -346,10 +346,6 @@ section {
   .hero {
     min-height: 500px;
   }
-
-  .nav-links a {
-    padding: 1.5rem;
-  }
 }
 
 /* Contact Section */
@@ -545,4 +541,20 @@ section {
   .form-group textarea:focus + label {
     background: #2a2a2a;
   }
+}
+
+#home {
+  scroll-margin-top: calc(var(--header-height) + var(--scroll-margin));
+}
+/* This matches your existing hero class but now with ID */
+#home.hero {
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("../images/spiritual-bg.jpg") no-repeat center center/cover;
 }
